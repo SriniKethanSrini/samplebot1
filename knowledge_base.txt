@@ -1,3 +1,4 @@
+hi::Hello! How can I help you?
 hello::Hello! How can I help you?
 how are you::I'm just a bot, but thanks for asking!
 what is your name::I'm a chat bot created by programming.
