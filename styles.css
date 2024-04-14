@@ -80,7 +80,7 @@ button:hover {
     margin-right: 10px;
     position: absolute; /* Add absolute positioning to bot logo */
     top: 10px; /* Adjust top position as needed */
-    left:600px; /* Adjust left position as needed */
+    left:420px; /* Adjust left position as needed */
 }
 
 /* Media queries */
