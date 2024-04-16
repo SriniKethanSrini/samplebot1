@@ -1,3 +1,4 @@
+// Function to load the knowledge base from a file
 function loadKnowledgeBase(callback) {
     fetch('knowledge_base.txt')
         .then(response => response.text())
@@ -18,12 +19,17 @@ function loadKnowledgeBase(callback) {
 // Analyze input against knowledge base
 function analyzeInput(inputText, knowledgeBase) {
     let response = "I'm sorry, I don't understand.";
+    let matched = false;
     for (let pattern in knowledgeBase) {
         let regex = new RegExp(pattern, 'i');
         if (regex.test(inputText)) {
             response = knowledgeBase[pattern];
+            matched = true;
             break;
         }
+    }
+    if (!matched) {
+        response = "I can't understand.";
     }
     return response;
 }
@@ -60,3 +66,4 @@ document.getElementById('user-input').addEventListener('keypress', function(even
         sendMessage();
     }
 });
+
